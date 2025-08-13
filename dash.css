@@ -1,49 +1,146 @@
-.side{
-    background-color: rgb(0, 166, 255);
-    color: white;
-    width: 20%vh;
-    height: 100%vh;
-    grid-area: 1/1/4/2;
-    padding: 10px;
-    font-size: 1.7rem;
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-.main{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    height: 100vh;
-    width: 100%vh;
-    background-color: rgb(254, 233, 249);
+html {
+  padding: 0%;
+  margin: -8px;
+  overflow: hidden;
 }
-.header{
+.main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 100vh;
+  width: 100%vh;
+  background-color: rgb(231, 231, 231);
+}
+.side {
+  background-color: rgb(8, 148, 223);
+  color: rgba(255, 255, 255, 0.937);
+  width: 20%vh;
+  height: 100%vh;
+  grid-area: 1/1/4/2;
+  font-size: 1.2rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.opt li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.da {
+  width: 20px;
+  height: 25px;
+  margin-left: -5px;
+}
+
+.opt li i {
+  color: #ffffff; /* Accent color */
+  font-size: 18px;
+}
+
+.header {
+  background-color: white;
+  grid-area: 1/1/2/5;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.4);
+  padding-left: 45vh;
+  padding-top: 20px;
+  max-height: 170px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+
+.search-input {
+  padding: 4px 8px;
+  border-radius: 24px;
+  background-color: #f1f1f1;
+  border: none;
+  outline: none;
+  padding: 8px;
+  width: 600px;
+  font-size: 16px;
+}
+
+.search-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  color: #606060;
+  font-size: 18px;
+}
+.profi {
+  display: flex;
+  height: 45px;
+  margin: 15px;
+}
+.notif-btn {
+  margin-left: 50px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: rgb(129, 129, 129); /* or any accent color */
+  padding: 8px;
+}
+.user {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 0.5fr 1.5fr repeat(3, 1fr);
+}
+.info {
+  justify-items: left;
+  margin: 0px;
+
+}
+h3 , p {
+    margin: 0px;
+    padding: 0px;
+}
+.btn {
+  background-color: rgb(8, 148, 223);
+  border-radius: 60px;
+  color: white;
+  height: 50px;
+  width: 120px;
+  font-weight: bold;
+  border: none;
+}
+/* CONTAINER AND CARDS-----------------------------------------------------*/
+.project-icons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 10px;
+}
+.container{
+   grid-template-columns: repeat(3,1fr);
+   grid-template-rows: repeat(3,1fr);
+}
+.project-card{
     background-color: white;
-    grid-area: 1/1/2/5;
-    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.4);
-
+    border-radius: 15px;
+    padding:40px;
+    margin:20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.search{
-    display: flex;
-    align-items: center;
-    background-color: #f1f1f1;
-    border-radius: 24px;
-    padding: 4px 8px;
-    width: fit-content;
-  }
-  
-  .search-input {
-    border: none;
-    background: transparent;
-    outline: none;
-    padding: 8px;
-    font-size: 16px;
-  }
-  
-  .search-btn {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 8px;
-    color: #606060;
-    font-size: 18px;
-  }
-  
+.project-icons i {
+  font-size: 20px;
+  color: #606060;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.project-icons i:hover {
+  color: #c50208; /* or any accent color you like */
+}
