@@ -9,7 +9,7 @@ html {
 }
 .main {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   height: 100vh;
   width: 100%vh;
   background-color: rgb(231, 231, 231);
@@ -17,9 +17,9 @@ html {
 .side {
   background-color: rgb(8, 148, 223);
   color: rgba(255, 255, 255, 0.937);
-  width: 20%vh;
+  width: 255px;
   height: 100%vh;
-  grid-area: 1/1/4/2;
+  grid-area: 1/1/6/2;
   font-size: 1.2rem;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
@@ -46,11 +46,10 @@ html {
 
 .header {
   background-color: white;
-  grid-area: 1/1/2/5;
-  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.4);
-  padding-left: 45vh;
-  padding-top: 20px;
-  max-height: 170px;
+  grid-area: 1/1/2/7;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  padding-left: 280px;
+  max-height: 175px;
 }
 
 .search {
@@ -60,6 +59,7 @@ html {
 }
 
 .search-input {
+    margin-right: 120px;
   padding: 4px 8px;
   border-radius: 24px;
   background-color: #f1f1f1;
@@ -77,6 +77,7 @@ html {
   padding: 8px;
   color: #606060;
   font-size: 18px;
+  cursor: pointer;
 }
 .profi {
   display: flex;
@@ -95,7 +96,7 @@ html {
 .user {
   display: grid;
   align-items: center;
-  grid-template-columns: 0.5fr 1.5fr repeat(3, 1fr);
+  grid-template-columns: 0.5fr 2fr repeat(3, 0.7fr);
 }
 .info {
   justify-items: left;
@@ -107,36 +108,54 @@ h3 , p {
     padding: 0px;
 }
 .btn {
+    cursor: pointer;
   background-color: rgb(8, 148, 223);
   border-radius: 60px;
   color: white;
-  height: 50px;
+  height: 45px;
   width: 120px;
   font-weight: bold;
   border: none;
 }
-/* CONTAINER AND CARDS-----------------------------------------------------*/
-.project-icons {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  margin-top: 10px;
+.btn:hover{
+background-color: #f1c206;
+transition: 0.5s;
 }
+/* CONTAINER AND CARDS-----------------------------------------------------*/
+
 .container{
-   grid-template-columns: repeat(3,1fr);
-   grid-template-rows: repeat(3,1fr);
+    grid-area: 2/2/6/5;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+   grid-template-rows: repeat(2,1fr);
+}
+.container h2{
+    margin-left: 19px;
+    position: absolute;
+    font-size: 1.2rem;
+    top:185px;
+    color: #606060;
 }
 .project-card{
+    font-size: 0.8rem;
+    width: 265px;
+    border-left: 7px solid #ffcc00; 
     background-color: white;
-    border-radius: 15px;
-    padding:40px;
-    margin:20px;
+    border-radius: 6px;
+    padding:25px;
+    margin:15px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.project-icons {
+  display: flex;
+  justify-content: right;
+  gap: 16px;
+  margin-top: 29px;
 }
 
 .project-icons i {
-  font-size: 20px;
-  color: #606060;
+  font-size: 15px;
+  color: #8e8c8c;
   cursor: pointer;
   transition: color 0.3s ease;
 }
